@@ -1,5 +1,8 @@
 @charset "utf-8";
 @import url(../css/font.css);
+@mixin gmarket {
+  font-family: "GmarketSansMedium";
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,26 +16,31 @@ a {
   color: #000;
   text-decoration: none;
 }
+image {
+  vertical-align: middle;
+  border: 0;
+}
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+  word-break: break-all;
 }
 
-.header {
+// 공통요소
+.clearfix::after {
+  content: "";
+  width: 100%;
+  clear: both;
 }
-.visual {
+
+.wrap {
+  position: relative;
+  display: block;
 }
-.schedule {
-}
-.Stage {
-}
-.gallery {
-}
-.notice {
-}
-.sump {
-}
-.gallery {
-}
-.footer {
-}
+@import "header";
+@import "visual";
+@import "schesule";
+@import "Stage";
+@import "notice";
+@import "gallery";
+@import "footer";
