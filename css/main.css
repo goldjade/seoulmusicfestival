@@ -22,6 +22,8 @@ image {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
   word-break: break-all;
 }
 
@@ -83,20 +85,19 @@ body {
   margin-right: 55px;
 }
 .gnb {
-  width: 846px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
 }
 .gnb > li {
-  height: 100%;
-  line-height: 120px;
+  padding: 0px 44px 0 44px;
 }
 .gnb > li > a {
-  display: block;
+  display: inline-block;
   font-size: 20px;
   font-weight: 500;
+  line-height: 120px;
   color: #fff;
   text-align: center;
 }
@@ -133,8 +134,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  white-space: nowrap;
   font-weight: 700;
+  white-space: nowrap;
   color: #fff;
   text-transform: uppercase;
 }
@@ -151,14 +152,15 @@ body {
 }
 .visual .v-wrap {
   width: 100vw;
-  height: 100%;
+  height: 1060px;
+  max-height: 1060px;
 }
 .visual .v-wrap .v-bg-wrap .sky {
   z-index: -9;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-image: url(../images/s1_bg00.jpg);
   background-repeat: no-repeat;
@@ -170,7 +172,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-image: url(../images/s1_bg01.png);
   background-repeat: no-repeat;
@@ -182,7 +184,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-image: url(../images/s1_bg02.png);
   background-repeat: no-repeat;
@@ -194,7 +196,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-image: url(../images/s1_bg03.png);
   background-repeat: no-repeat;
@@ -234,7 +236,7 @@ body {
   bottom: 0px;
   width: 100%;
   height: 100px;
-  background: url(../images/w_wave.png) 1920px center repeat-x;
+  background: url(../images/w_wave.png) 1920px bottom repeat-x;
   background-size: contain;
   -webkit-animation: wave 30s linear infinite;
           animation: wave 30s linear infinite;
@@ -255,6 +257,22 @@ body {
     background-position: -1920px center;
   }
 }
+.visual hi .v-b-l {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 106px;
+  height: 144px;
+}
+.visual .v-b-r {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 338px;
+  max-height: 417px;
+}
 
 .schedule {
   position: relative;
@@ -262,6 +280,9 @@ body {
 }
 
 .s-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -277,18 +298,26 @@ body {
   font-family: "GmarketSansMedium";
   font-size: 22px;
   font-weight: 300;
+  line-height: 1.4545454545;
   padding: 90px 0 110px 0;
 }
 .s-wrap .s-li > li {
   display: flex;
+  align-items: center;
+  margin-bottom: 35px;
 }
 .s-wrap .s-li > li .pp {
-  display: inline-block;
   width: 162px;
   height: 43px;
   border-radius: 20px;
   background: #364b4d;
-  line-height: 45px;
-  margin: 0 35px 25px 0;
+  line-height: 43px;
   color: #fff;
+  margin-right: 25px;
+}
+.s-wrap .s-li > li > p {
+  font-size: 22px;
+  line-height: 22px;
+  text-align: left;
+  line-height: 32px;
 }

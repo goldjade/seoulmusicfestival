@@ -3,6 +3,9 @@
   display: block;
 }
 .s-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -17,20 +20,28 @@
     font-family: "GmarketSansMedium";
     font-size: 22px;
     font-weight: 300;
+    line-height: calc(32 / 22);
     padding: 90px 0 110px 0;
   }
   .s-li {
     > li {
       display: flex;
+      align-items: center;
+      margin-bottom: 35px;
       .pp {
-        display: inline-block;
         width: 162px;
         height: 43px;
         border-radius: 20px;
         background: #364b4d;
-        line-height: 45px;
-        margin: 0 35px 25px 0;
+        line-height: 43px;
         color: #fff;
+        margin-right: 25px;
+      }
+      > p {
+        font-size: 22px;
+        line-height: 22px;
+        text-align: left;
+        line-height: 32px;
       }
     }
   }
