@@ -1,128 +1,129 @@
 .visual {
   position: relative;
   display: block;
-  .v-wrap {
-    width: 100vw;
-    height: 1060px;
-    max-height: 1060px;
-    .v-bg-wrap {
-      .sky {
-        z-index: -9;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background : {
-          image: url(../images/s1_bg00.jpg);
-          repeat: no-repeat;
-          position: center;
-          size: cover;
-        }
-      }
-      .sun {
-        z-index: -8;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background : {
-          image: url(../images/s1_bg01.png);
-          repeat: no-repeat;
-          position: center;
-          size: cover;
-        }
-      }
-      .city {
-        z-index: -7;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background : {
-          image: url(../images/s1_bg02.png);
-          repeat: no-repeat;
-          position: center;
-          size: cover;
-        }
-      }
-      .hill {
-        z-index: -6;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background : {
-          image: url(../images/s1_bg03.png);
-          repeat: no-repeat;
-          position: center;
-          size: cover;
-        }
-      }
-    }
-    .t-wrap {
-      z-index: -3;
+}
+.v-wrap {
+  width: 100vw;
+  height: 100%;
+  .v-bg-wrap {
+    .sky {
+      z-index: -9;
       position: absolute;
-      left: 50%;
-      top: 20%;
-      transform: translateX(-50%);
-      max-width: 400px;
-      max-height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      .txt {
-        margin-bottom: 25px;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background : {
+        image: url(../images/s1_bg00.jpg);
+        repeat: no-repeat;
+        position: center;
+        size: cover;
       }
-      p {
-        text-align: center;
-        color: #fff;
-        margin-bottom: 27px;
+    }
+    .sun {
+      z-index: -8;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background : {
+        image: url(../images/s1_bg01.png);
+        repeat: no-repeat;
+        position: center;
+        size: cover;
       }
-      h2 {
-        font-family: "GmarketSansMedium";
-        text-align: center;
-        font-size: 40px;
-        color: #fff;
+    }
+    .city {
+      z-index: -7;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background : {
+        image: url(../images/s1_bg02.png);
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+      }
+    }
+    .hill {
+      z-index: -6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background : {
+        image: url(../images/s1_bg03.png);
+        repeat: no-repeat;
+        position: center;
+        size: cover;
       }
     }
   }
-  .wave {
-    z-index: 1;
+  .t-wrap {
+    z-index: -3;
     position: absolute;
-    display: block;
-    bottom: 0px;
-    width: 100%;
-    height: 100px;
-    background: url(../images/w_wave.png) 1920px bottom repeat-x;
-    background-size: contain;
-    animation: wave 30s linear infinite;
-  }
-  @keyframes wave {
-    0% {
-      background-position: 0 center;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    max-width: 400px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .txt {
+      margin-bottom: 25px;
     }
-    100% {
-      background-position: -1920px center;
+    p {
+      font-size: 24px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 27px;
+    }
+    h2 {
+      font-family: "GmarketSansMedium";
+      text-align: center;
+      font-size: 44px;
+      color: #fff;
+      margin-top: 25px;
     }
   }
-  hi .v-b-l {
-    z-index: 2;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 106px;
-    height: 144px;
+}
+.w-wave {
+  z-index: 1;
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  width: 100vw;
+  height: 100px;
+  background: url(../images/w_wave.png) 1920px bottom repeat-x;
+  background-size: contain;
+  animation: wave 30s linear infinite;
+}
+@keyframes wave {
+  0% {
+    background-position: 0 center;
   }
-  .v-b-r {
-    z-index: 2;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    max-width: 338px;
-    max-height: 417px;
+  100% {
+    background-position: -1920px center;
   }
+}
+.v-b-l {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 106px;
+  height: 144px;
+}
+.v-b-r {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 338px;
+  max-height: 417px;
 }

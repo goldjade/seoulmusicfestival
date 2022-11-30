@@ -1,34 +1,40 @@
 .schedule {
+}
+.s-wrap-t {
   position: relative;
   display: block;
-}
-.s-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   margin: 0 auto;
-  text-align: center;
+  padding-top: 25px;
   .smf {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 100%;
-    transform: translateX(-50%);
+    position: relative;
+    display: block;
+    max-width: 100%;
+    max-height: 77px;
   }
   h2 {
     font-family: "GmarketSansMedium";
     font-size: 22px;
     font-weight: 300;
+    text-align: center;
     line-height: calc(32 / 22);
-    padding: 90px 0 110px 0;
   }
+}
+.s-wrap-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   .s-li {
+    padding-bottom: 300px;
     > li {
       display: flex;
+      width: 100%;
       align-items: center;
-      margin-bottom: 35px;
-      .pp {
+      margin-bottom: 25px;
+      > h3 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 162px;
         height: 43px;
         border-radius: 20px;
@@ -36,6 +42,7 @@
         line-height: 43px;
         color: #fff;
         margin-right: 25px;
+        padding: 0 30px;
       }
       > p {
         font-size: 22px;
@@ -43,6 +50,41 @@
         text-align: left;
         line-height: 32px;
       }
+      > img {
+        width: 170px;
+        height: 44px;
+      }
+    }
+  }
+  .s-b-l {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 510px;
+    max-height: 530px;
+  }
+  .s-b-r {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 510px;
+    max-height: 530px;
+  }
+  .p-wave {
+    z-index: 1;
+    bottom: 0px;
+    width: 100vw;
+    height: 100px;
+    background: url(../images/p_wave.png) 1920px bottom repeat-x;
+    background-size: contain;
+    animation: wave 30s linear infinite;
+  }
+  @keyframes wave {
+    0% {
+      background-position: 0 center;
+    }
+    100% {
+      background-position: -1920px center;
     }
   }
 }

@@ -91,7 +91,9 @@ body {
   text-transform: uppercase;
 }
 .gnb > li {
+  width: 16.6666666667%;
   padding: 0px 44px 0 44px;
+  text-align: center;
 }
 .gnb > li > a {
   display: inline-block;
@@ -99,7 +101,7 @@ body {
   font-weight: 500;
   line-height: 120px;
   color: #fff;
-  text-align: center;
+  white-space: nowrap;
 }
 .gnb > li .depth2 {
   visibility: hidden;
@@ -110,6 +112,7 @@ body {
   transition: 1s;
 }
 .gnb > li .depth2 > li > a {
+  white-space: nowrap;
   color: #818181;
 }
 .gnb > li .depth2 > li:hover a {
@@ -150,60 +153,60 @@ body {
   position: relative;
   display: block;
 }
-.visual .v-wrap {
+
+.v-wrap {
   width: 100vw;
-  height: 1060px;
-  max-height: 1060px;
+  height: 100%;
 }
-.visual .v-wrap .v-bg-wrap .sky {
+.v-wrap .v-bg-wrap .sky {
   z-index: -9;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-image: url(../images/s1_bg00.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.visual .v-wrap .v-bg-wrap .sun {
+.v-wrap .v-bg-wrap .sun {
   z-index: -8;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-image: url(../images/s1_bg01.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.visual .v-wrap .v-bg-wrap .city {
+.v-wrap .v-bg-wrap .city {
   z-index: -7;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-image: url(../images/s1_bg02.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.visual .v-wrap .v-bg-wrap .hill {
+.v-wrap .v-bg-wrap .hill {
   z-index: -6;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-image: url(../images/s1_bg03.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.visual .v-wrap .t-wrap {
+.v-wrap .t-wrap {
   z-index: -3;
   position: absolute;
   left: 50%;
@@ -215,32 +218,36 @@ body {
   flex-direction: column;
   justify-content: center;
 }
-.visual .v-wrap .t-wrap .txt {
+.v-wrap .t-wrap .txt {
   margin-bottom: 25px;
 }
-.visual .v-wrap .t-wrap p {
+.v-wrap .t-wrap p {
+  font-size: 24px;
   text-align: center;
   color: #fff;
   margin-bottom: 27px;
 }
-.visual .v-wrap .t-wrap h2 {
+.v-wrap .t-wrap h2 {
   font-family: "GmarketSansMedium";
   text-align: center;
-  font-size: 40px;
+  font-size: 44px;
   color: #fff;
+  margin-top: 25px;
 }
-.visual .wave {
+
+.w-wave {
   z-index: 1;
   position: absolute;
   display: block;
   bottom: 0px;
-  width: 100%;
+  width: 100vw;
   height: 100px;
   background: url(../images/w_wave.png) 1920px bottom repeat-x;
   background-size: contain;
   -webkit-animation: wave 30s linear infinite;
           animation: wave 30s linear infinite;
 }
+
 @-webkit-keyframes wave {
   0% {
     background-position: 0 center;
@@ -249,6 +256,7 @@ body {
     background-position: -1920px center;
   }
 }
+
 @keyframes wave {
   0% {
     background-position: 0 center;
@@ -257,7 +265,7 @@ body {
     background-position: -1920px center;
   }
 }
-.visual hi .v-b-l {
+.v-b-l {
   z-index: 2;
   position: absolute;
   bottom: 0;
@@ -265,7 +273,8 @@ body {
   width: 106px;
   height: 144px;
 }
-.visual .v-b-r {
+
+.v-b-r {
   z-index: 2;
   position: absolute;
   bottom: 0;
@@ -274,39 +283,45 @@ body {
   max-height: 417px;
 }
 
-.schedule {
+.s-wrap-t {
   position: relative;
   display: block;
-}
-
-.s-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   margin: 0 auto;
-  text-align: center;
+  padding-top: 25px;
 }
-.s-wrap .smf {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100%;
-  transform: translateX(-50%);
+.s-wrap-t .smf {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  max-height: 77px;
 }
-.s-wrap h2 {
+.s-wrap-t h2 {
   font-family: "GmarketSansMedium";
   font-size: 22px;
   font-weight: 300;
+  text-align: center;
   line-height: 1.4545454545;
-  padding: 90px 0 110px 0;
 }
-.s-wrap .s-li > li {
+
+.s-wrap-b {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 35px;
+  text-align: center;
 }
-.s-wrap .s-li > li .pp {
+.s-wrap-b .s-li {
+  padding-bottom: 300px;
+}
+.s-wrap-b .s-li > li {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.s-wrap-b .s-li > li > h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 162px;
   height: 43px;
   border-radius: 20px;
@@ -314,10 +329,47 @@ body {
   line-height: 43px;
   color: #fff;
   margin-right: 25px;
+  padding: 0 30px;
 }
-.s-wrap .s-li > li > p {
+.s-wrap-b .s-li > li > p {
   font-size: 22px;
   line-height: 22px;
   text-align: left;
   line-height: 32px;
+}
+.s-wrap-b .s-li > li > img {
+  width: 170px;
+  height: 44px;
+}
+.s-wrap-b .s-b-l {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 510px;
+  max-height: 530px;
+}
+.s-wrap-b .s-b-r {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  max-width: 510px;
+  max-height: 530px;
+}
+.s-wrap-b .p-wave {
+  z-index: 1;
+  bottom: 0px;
+  width: 100vw;
+  height: 100px;
+  background: url(../images/p_wave.png) 1920px bottom repeat-x;
+  background-size: contain;
+  -webkit-animation: wave 30s linear infinite;
+          animation: wave 30s linear infinite;
+}
+@keyframes wave {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -1920px center;
+  }
 }
