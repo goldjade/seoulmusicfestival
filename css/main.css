@@ -155,7 +155,7 @@ body {
 }
 
 .v-wrap {
-  width: 100vw;
+  width: 100%;
   height: 100%;
 }
 .v-wrap .v-bg-wrap .sky {
@@ -285,9 +285,12 @@ body {
 
 .s-wrap-t {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 0 auto;
   padding-top: 25px;
+  padding-bottom: 300px;
 }
 .s-wrap-t .smf {
   position: relative;
@@ -299,26 +302,18 @@ body {
   font-family: "GmarketSansMedium";
   font-size: 22px;
   font-weight: 300;
-  text-align: center;
   line-height: 1.4545454545;
 }
-
-.s-wrap-b {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+.s-wrap-t .s-li {
+  padding-top: 108;
 }
-.s-wrap-b .s-li {
-  padding-bottom: 300px;
-}
-.s-wrap-b .s-li > li {
+.s-wrap-t .s-li > li {
   display: flex;
   width: 100%;
   align-items: center;
   margin-bottom: 25px;
 }
-.s-wrap-b .s-li > li > h3 {
+.s-wrap-t .s-li > li > h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -331,20 +326,27 @@ body {
   margin-right: 25px;
   padding: 0 30px;
 }
-.s-wrap-b .s-li > li > p {
+.s-wrap-t .s-li > li > p {
   font-size: 22px;
   line-height: 22px;
   text-align: left;
   line-height: 32px;
 }
-.s-wrap-b .s-li > li > img {
+.s-wrap-t .s-li > li > img {
   width: 170px;
   height: 44px;
+}
+
+.s-wrap-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .s-wrap-b .s-b-l {
   position: absolute;
   bottom: 0;
-  right: 0;
+  left: 0;
   max-width: 510px;
   max-height: 530px;
 }
@@ -356,6 +358,8 @@ body {
   max-height: 530px;
 }
 .s-wrap-b .p-wave {
+  position: absolute;
+  bottom: 0;
   z-index: 1;
   bottom: 0px;
   width: 100vw;
